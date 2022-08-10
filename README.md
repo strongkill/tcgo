@@ -1,14 +1,24 @@
 # tcgo
 web framework writen by Go language
 
+##HOW TO USE
+
+```go
+#add in go.mod
+
+require (
+	github.com/strongkill/tcgo v1.0.2
+)
+
+```
 
 ###example 1
 ```go
 package main
 
 import (
+	"github.com/strongkill/tcgo/tcgo"
 	"net/http"
-	"tcgo"
 )
 
 func main() {
@@ -39,6 +49,10 @@ func main() {
 ```go
 package main
 
+import (
+	"github.com/strongkill/tcgo/tcgo"
+	"net/http"
+)
 func main() {
 	r := tcgo.New()
 	r.GET("/index", func(c *tcgo.Context) {
@@ -76,6 +90,11 @@ func main() {
 ###example midlleware
 ```go
 package main
+
+import (
+	"github.com/strongkill/tcgo/tcgo"
+	"net/http"
+)
 func onlyForV2() tcgo.HandlerFunc {
 	return func(c *tcgo.Context) {
 		// Start timer
@@ -110,6 +129,11 @@ func main() {
 ###example templates
 ```go
 package main
+
+import (
+	"github.com/strongkill/tcgo/tcgo"
+	"net/http"
+)
 type student struct {
 	Name string
 	Age  int8
