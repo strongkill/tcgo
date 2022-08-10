@@ -45,7 +45,7 @@ func main() {
 }
 
 ```
-###example 2
+###example 2 Group
 ```go
 package main
 
