@@ -6,24 +6,9 @@ import (
 )
 
 func main() {
-	r := tcgo.New()
+	r := tcgo.Default()
 	r.GET("/", func(c *tcgo.Context) {
-		c.HTML(http.StatusOK, "<h1>Hello tcgo</h1>")
+		c.String(http.StatusOK, "Hello world\n")
 	})
-
-	r.GET("/hello", func(c *tcgo.Context) {
-		// expect /hello?name=tcgo
-		c.String(http.StatusOK, "hello %s, you're at %s\n", c.Query("name"), c.Path)
-	})
-
-	r.GET("/hello/:name", func(c *tcgo.Context) {
-		// expect /hello/tcgo
-		c.String(http.StatusOK, "hello %s, you're at %s\n", c.Param("name"), c.Path)
-	})
-
-	r.GET("/assets/*filepath", func(c *tcgo.Context) {
-		c.JSON(http.StatusOK, tcgo.H{"filepath": c.Param("filepath")})
-	})
-
 	r.Run(":3000")
 }
