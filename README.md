@@ -7,7 +7,7 @@ web framework writen by Go language
 #add in go.mod
 
 require (
-	github.com/strongkill/tcgo v1.0.2
+	github.com/strongkill/tcgo v1.0.4
 )
 
 ```
