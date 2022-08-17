@@ -1,5 +1,8 @@
 package tcgo
 
+/**
+Tire
+*/
 import "strings"
 
 type node struct {

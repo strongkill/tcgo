@@ -1,5 +1,8 @@
 package tcgo
 
+/**
+tcgo
+*/
 import (
 	"html/template"
 	"log"

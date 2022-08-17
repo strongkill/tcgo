@@ -127,6 +127,43 @@ func main() {
 ```
 
 ###example templates
+
+
+
+```css
+/*/assets/css/index.css*/
+p {
+    color: orange;
+    font-weight: 700;
+    font-size: 20px;
+}
+```
+```html
+<!-- templates/index.tmpl -->
+<html>
+<link rel="stylesheet" href="/assets/css/index.css">
+<p>index is loaded</p>
+</html>
+
+<!-- templates/arr.tmpl -->
+<html>
+<body>
+    <p>hello, {{.title}}</p>
+    {{range $index, $ele := .stuArr }}
+    <p>{{ $index }}: {{ $ele.Name }} is {{ $ele.Age }} years old</p>
+    {{ end }}
+</body>
+</html>
+
+<!-- templates/custom_func.tmpl -->
+<html>
+<body>
+<p>hello, {{.title}}</p>
+<p>Date: {{.now | FormatAsDate}}</p>
+</body>
+</html>
+
+```
 ```go
 package main
 
@@ -153,10 +190,10 @@ func main() {
 	r.LoadHTMLGlob("templates/*")
 	r.Static("/assets", "./static")
 
-	stu1 := &student{Name: "tcgoktutu", Age: 20}
+	stu1 := &student{Name: "tcgo", Age: 20}
 	stu2 := &student{Name: "Jack", Age: 22}
 	r.GET("/", func(c *tcgo.Context) {
-		c.HTML(http.StatusOK, "css.tmpl", nil)
+		c.HTML(http.StatusOK, "index.tmpl", nil)
 	})
 	r.GET("/students", func(c *tcgo.Context) {
 		c.HTML(http.StatusOK, "arr.tmpl", tcgo.H{

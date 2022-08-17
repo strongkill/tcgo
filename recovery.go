@@ -1,5 +1,8 @@
 package tcgo
 
+/**
+recovery
+*/
 import (
 	"fmt"
 	"log"

@@ -1,5 +1,8 @@
 package tcgo
 
+/**
+Logger
+*/
 import (
 	"log"
 	"time"
