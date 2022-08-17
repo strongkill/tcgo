@@ -17,7 +17,7 @@ require (
 package main
 
 import (
-	"github.com/strongkill/tcgo/tcgo"
+	"github.com/strongkill/tcgo"
 	"net/http"
 )
 
@@ -50,7 +50,7 @@ func main() {
 package main
 
 import (
-	"github.com/strongkill/tcgo/tcgo"
+	"github.com/strongkill/tcgo"
 	"net/http"
 )
 func main() {
@@ -92,7 +92,7 @@ func main() {
 package main
 
 import (
-	"github.com/strongkill/tcgo/tcgo"
+	"github.com/strongkill/tcgo"
 	"net/http"
 )
 func onlyForV2() tcgo.HandlerFunc {
@@ -168,7 +168,7 @@ p {
 package main
 
 import (
-	"github.com/strongkill/tcgo/tcgo"
+	"github.com/strongkill/tcgo"
 	"net/http"
 )
 type student struct {
@@ -219,7 +219,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/strongkill/tcgo/tcgo"
+	"github.com/strongkill/tcgo"
 )
 
 func main() {
