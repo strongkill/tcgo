@@ -1,11 +1,5 @@
 package tcgo
 
-import (
-	"encoding/json"
-	"fmt"
-	"net/http"
-)
-
 /**
 Context
 */
