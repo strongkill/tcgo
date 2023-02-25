@@ -1,7 +1,9 @@
 package tcgo
 
 /**
-tcgo
+tcgo a web framework writen by Go language
+Author Wing K.Y
+2023-02-25
 */
 import (
 	"html/template"
