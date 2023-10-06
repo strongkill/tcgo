@@ -7,7 +7,7 @@ Author Wing K.Y
 2023-02-25
 */
 import (
-	"log"
+	"github.com/strongkill/goConsole/console"
 	"time"
 )
 
@@ -18,6 +18,6 @@ func Logger() HandlerFunc {
 		// Process request
 		c.Next()
 		// Calculate resolution time
-		log.Printf("[%d] %s in %v", c.StatusCode, c.Req.RequestURI, time.Since(t))
+		console.Log("[%d] %s in %v", c.StatusCode, c.Req.RequestURI, time.Since(t))
 	}
 }
